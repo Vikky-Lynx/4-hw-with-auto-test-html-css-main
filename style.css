@@ -9,14 +9,14 @@
     margin: 0px auto;
     max-width: 1180px; /* ⚠️ ОБРАТИ ВНИМАНИЕ - максимальная ширина увеличилась на размер отступов, чтобы ширина контента оставалась корректной */
     /* 📍 Свойство для внутрених отступов */
-    padding-left: 20px;
-    padding-right: 602px;
+    padding-top: 23px 602px 23px 20px;
 }
 
 body {
     font-family: "Inter", sans-serif; 
     color: #303030;
-    /* 📍 Минимальная ширина */ 
+    /* 📍 Минимальная ширина */
+    min-width: 375px;
 }
 
 header {
@@ -145,6 +145,9 @@ select:hover,
 form {
     margin-bottom: 40px;
     /* 📍 Свойства для расположения элементов (инпута и кнопки) и отступа между ними */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .text-field {
@@ -213,22 +216,19 @@ footer {
     .main-section {
         /* 📍 Свойства для установки минимальной высоты секции по размеру контента и нижнего внутреннего отступа */
         min-height: 850px;
-        padding: 100px;
+        padding-bottom: 100px;
     }
 
     .main-section .wrapper {
         /* 📍 Свойства для расположения элементов и отступа между ними */
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
         flex-direction: column-reverse;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: space-between;
     }
 
     .main-image {
         /* 📍 Максимальная ширина для главного изображения в % */
-        max-width: 728px;
+        max-width: 94%;
     }
 
     .text-wrapper {
@@ -246,6 +246,9 @@ footer {
 @media screen and (max-width: 768px) {
     .info-wrapper {
         /* 📍 Свойства для расположения 2-x списков и отступа между ними */
+        width: 768px;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 
@@ -253,18 +256,25 @@ footer {
 @media screen and (max-width: 576px) {
     .main-section {
         /* 📍 Внутренние отступы сверху и снизу */
+        padding-top: 30px;
+        padding-bottom: 60px;
     }
 
     .main-section .wrapper {
         /* 📍 Отступ между изображением и блоком с текстом */
+        margin: 20px;
+        padding: 20px;
     }
 
     .main-title {
         /* 📍 Размер шрифта */
+        font-size: 36px;
     }
 
     .about-section .wrapper,
     .info-wrapper {
         /* 📍 Отступ между изображением и блоком с текстом */
+        margin: 20px;
+        padding: 15px;
     }
 }
